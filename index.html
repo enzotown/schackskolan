@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Schackskolan — lär dig spela schack</title>
+<meta name="description" content="Lär dig schack genom att spela: träna varje pjäs, lös mattpussel och spela mot en snäll robot.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Schackskolan — lär dig spela schack">
+<meta property="og:description" content="Lär dig schack genom att spela: träna varje pjäs, lös mattpussel och spela mot en snäll robot.">
+<meta property="og:image" content="https://schackskolan.shipholm.dev/delningsbild.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="sv_SE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Schackskolan">
+<meta name="theme-color" content="#fdf6ea">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="icon-180.png">
+<style>
+  html, body { margin:0; padding:0; height:100%; overflow:hidden; background:#fdf6ea;
+    font-family:"Trebuchet MS", Verdana, sans-serif; -webkit-user-select:none; user-select:none;
+    -webkit-tap-highlight-color:transparent; touch-action:none; }
+  #wrap { position:fixed; inset:0; }
+  canvas { display:block; width:100%; height:100%; touch-action:none; }
+</style>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" sizes="192x192" href="icon-192.png">
+<style>
+/* Lgr22-märket: litet, diskret, alltid samma i alla spel */
+.lgr22{position:fixed;right:10px;bottom:10px;z-index:40;display:flex;align-items:center;
+  gap:5px;padding:4px 9px 4px 7px;border-radius:12px;background:rgba(255,250,243,.78);
+  border:1px solid rgba(74,63,57,.18);color:#6b5d54;font:600 11px/1 "Trebuchet MS",system-ui,sans-serif;
+  letter-spacing:.4px;text-decoration:none;opacity:.72;-webkit-tap-highlight-color:transparent;
+  transition:opacity .15s ease}
+.lgr22:hover,.lgr22:focus{opacity:1}
+.lgr22 svg{width:12px;height:12px;display:block}
+@media (max-width:520px){.lgr22{font-size:10px;padding:3px 8px 3px 6px}}
+</style>
+</head>
+<body>
+<div id="wrap"><canvas id="c"></canvas></div>
+<script src="ui.js"></script>
+<script src="rules.js"></script>
+<script src="ai.js"></script>
+<script src="lessons.js"></script>
+<script src="art.js"></script>
+<script src="kotten.js"></script>
+<script src="art2.js"></script>
+<script src="menu.js"></script>
+<script src="cards.js"></script>
+<script src="sma-ljud.js"></script>
+<script src="app.js"></script>
+<script src="loop.js"></script>
+
+<!-- Lgr22: diskret länk till lärarsidan -->
+<a class="lgr22" href="larare.html" title="Lärarsida: vad spelet tränar och koppling till Lgr22" aria-label="Lärarsida med koppling till Lgr22">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/>
+  </svg>
+  Lgr22
+</a>
+
+<script>if('serviceWorker' in navigator){addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}</script>
+</body>
+</html>
